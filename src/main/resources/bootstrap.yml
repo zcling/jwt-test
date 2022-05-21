@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: designer-gateway-v1
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.133.202:8848 #nacos注册地址
+        namespace: ftb3-integration-subdomain
+        username: nacos
+        password: nacos

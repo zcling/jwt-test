@@ -1,0 +1,8 @@
+server:
+  port: 9999
+filter:
+  enable:
+    token: true
+
+
+
