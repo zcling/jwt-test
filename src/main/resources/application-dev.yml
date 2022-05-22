@@ -1,0 +1,17 @@
+spring:
+  cloud:
+    gateway:
+      enabled: true
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        #-----------------拦截器--------------------
+        # jetta-vs7mp-adapter
+        - id: test-service-list
+          uri: lb://test-service-v1
+          predicates:
+            - Path=/test/testzcl/**
+          filters:
+            - StripPrefix=1
+

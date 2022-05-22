@@ -8,3 +8,19 @@ spring:
         namespace: ftb3-integration-subdomain
         username: nacos
         password: nacos
+        enabled: true
+
+management:
+  endpoints:
+    web:
+      base-path: /actuator
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
+
+#签名设置
+auth-sign:
+  secretKey: 66
+  appkey: 989
